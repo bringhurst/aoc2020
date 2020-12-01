@@ -17,5 +17,3 @@ def test_three_sum():
     mock_result: Set[int] = {979, 366, 675}
 
     assert report_repair.calc_three_sum(mock_input, mock_sum_to) == mock_result
-
-

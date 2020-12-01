@@ -244,11 +244,24 @@ def calc_two_sum(inputs: List[int], sum_to: int) -> Set[int]:
         if not j:
             continue
 
-        if i + j == sum_to:
-            return set({i, j})
+        return set({i, j})
 
     raise ValueError("Two sum does not exist")
 
 
 def calc_three_sum(inputs: List[int], sum_to: int) -> Set[int]:
-    raise NotImplementedError()
+    lookup: Dict[int, Set[int]] = dict()
+
+    for i in inputs:
+        for j in inputs:
+            lookup[sum_to - (i + j)] = set({i, j})
+
+    for i in inputs:
+        k: Optional[Set[int]] = lookup.get(i)
+        if not k:
+            continue
+
+        k.add(i)
+        return k
+
+    raise ValueError("Three sum does not exist")
