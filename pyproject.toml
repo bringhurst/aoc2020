@@ -8,7 +8,7 @@ packages = [
 ]
 
 [tool.poetry.scripts]
-greet = "aoc.main:main"
+aoc2020 = "aoc2020.main:main"
 
 [tool.poetry.dependencies]
 python = "^3.9"
