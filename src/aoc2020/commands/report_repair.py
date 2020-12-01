@@ -10,7 +10,7 @@ def report_repair() -> None:
 
 
 @report_repair.command()
-def example() -> None:
+def part_one_example() -> None:
     expense_report: List[int] = [1721, 979, 366, 299, 675, 1456]
     sum_to: int = 2020
 
@@ -21,7 +21,7 @@ def example() -> None:
 
 
 @report_repair.command()
-def actual() -> None:
+def part_one_actual() -> None:
     expense_report: List[int] = [
         1619,
         1919,
@@ -248,3 +248,7 @@ def calc_two_sum(inputs: List[int], sum_to: int) -> Set[int]:
             return set({i, j})
 
     raise ValueError("Two sum does not exist")
+
+
+def calc_three_sum(inputs: List[int], sum_to: int) -> Set[int]:
+    raise NotImplementedError()
